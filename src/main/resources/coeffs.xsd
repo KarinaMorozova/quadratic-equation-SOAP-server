@@ -1,0 +1,32 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://example"
+           targetNamespace="http://example"
+           elementFormDefault="qualified">
+
+    <xs:element name="getRootsRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="a" type="xs:int"/>
+                <xs:element name="b" type="xs:int"/>
+                <xs:element name="c" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getRootsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="roots" type="tns:roots"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="roots">
+        <xs:sequence>
+            <xs:element name="formula" type="xs:string"/>
+            <xs:element name="d" type="xs:double"/>
+            <xs:element name="x1" type="xs:double"/>
+            <xs:element name="x2" type="xs:double"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
